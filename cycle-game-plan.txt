@@ -1,0 +1,14 @@
+Player2(characteristics):
+   1.Color different from P1 -Jared
+   2.Movement mapped different from P1 -Dean
+Major Changes(to do):
+   1.Collision of P1 head to P2 segment/trail and vice versa.-Dean
+
+   2.Players starts with head only. Segments appear when moving. -Jared
+
+   3.Position P2 away from P1. -Naomi
+
+Problems:
+   1.We lose the food class(no purpose). Down to 15 class(required is 16 classes)
+
+   
