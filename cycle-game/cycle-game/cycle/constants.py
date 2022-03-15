@@ -1,4 +1,3 @@
-from turtle import color
 from game.shared.color import Color
 
 
