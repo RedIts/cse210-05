@@ -37,19 +37,19 @@ class HandleCollisionsAction(Action):
             cast (Cast): The cast of Actors in the game.
         """
         score = cast.get_first_actor("scores")
-        red = cast.get_first_actor("red")
+        blue = cast.get_first_actor("blue")
         green = cast.get_first_actor("green")
-        red_front = red.get_segments()[0]
+        blue_front = blue.get_segments()[0]
         green_front = green.get_segments()[0]
-        red_trails = red.get_segments()[1:]
+        blue_trails = blue.get_segments()[1:]
         green_trails = green.get_segments()[1:]
 
         for green_trail in green_trails:
-            if red_front.get_position().equals(green_trail.get_position()):
+            if blue_front.get_position().equals(green_trail.get_position()):
                 self._is_game_over = True
 
-        for red_trail in red_trails:
-            if green_front.get_position().equals(red_trail.get_position()):
+        for blue_trail in blue_trails:
+            if green_front.get_position().equals(blue_trail.get_position()):
                 self._is_game_over = True
     
     def _handle_segment_collision(self, cast):
@@ -58,12 +58,12 @@ class HandleCollisionsAction(Action):
         Args:
             cast (Cast): The cast of Actors in the game.
         """
-        red = cast.get_first_actor("red")
-        red_front = red.get_segments()[0]
-        red_trails = red.get_segments()[1:]
+        blue = cast.get_first_actor("blue")
+        blue_front = blue.get_segments()[0]
+        blue_trails = blue.get_segments()[1:]
         
-        for red_trail in red_trails:
-            if red_front.get_position().equals(red_trail.get_position()):
+        for blue_trail in blue_trails:
+            if blue_front.get_position().equals(blue_trail.get_position()):
                 self._is_game_over = True
         
         green = cast.get_first_actor("green")
@@ -81,8 +81,8 @@ class HandleCollisionsAction(Action):
             cast (Cast): The cast of Actors in the game.
         """
         if self._is_game_over:
-            red = cast.get_first_actor("red")
-            red_trails = red.get_segments()
+            blue = cast.get_first_actor("blue")
+            blue_trails = blue.get_segments()
             green = cast.get_first_actor("green")
             green_trails = green.get_segments()
             # food = cast.get_first_actor("foods")
@@ -96,8 +96,8 @@ class HandleCollisionsAction(Action):
             message.set_position(position)
             cast.add_actor("messages", message)
 
-            for red_trail in red_trails:
-                red_trail.set_color(constants.WHITE)
+            for blue_trail in blue_trails:
+                blue_trail.set_color(constants.WHITE)
             for green_trail in green_trails:
                 green_trail.set_color(constants.WHITE)
             # food.set_color(constants.WHITE)

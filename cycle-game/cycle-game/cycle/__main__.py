@@ -20,9 +20,10 @@ def main():
     
     # create the cast
     cast = Cast()
-    cast.add_actor("red", Snake(constants.PURPLE, constants.BLUE))
+    cast.add_actor("blue", Snake(constants.PURPLE, constants.BLUE))
     cast.add_actor("green", Snake(constants.YELLOW, constants.GREEN))
-    cast.add_actor("scores", Score())
+    cast.add_actor("player1_scores", Score())
+    cast.add_actor("player2_scores", Score())
    
     # start the game
     keyboard_service = KeyboardService()

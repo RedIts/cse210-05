@@ -63,7 +63,7 @@ class ControlActorsAction(Action):
         if self._keyboard_service2.is_key_down('k'):
             self._direction2 = Point(0, constants.CELL_SIZE)
 
-        red = cast.get_first_actor("red")
+        red = cast.get_first_actor("blue")
         red.turn_head(self._direction1)
 
         green = cast.get_first_actor("green")
