@@ -20,8 +20,8 @@ def main():
     
     # create the cast
     cast = Cast()
-    cast.add_actor("foods", Food())
-    cast.add_actor("snakes", Snake())
+    cast.add_actor("red", Snake())
+    cast.add_actor("green", Snake())
     cast.add_actor("scores", Score())
    
     # start the game
