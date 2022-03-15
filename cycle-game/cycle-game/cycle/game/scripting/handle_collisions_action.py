@@ -1,4 +1,5 @@
 import constants
+import random
 from game.casting.actor import Actor
 from game.scripting.action import Action
 from game.shared.point import Point
@@ -43,6 +44,12 @@ class HandleCollisionsAction(Action):
         green_front = green.get_segments()[0]
         blue_trails = blue.get_segments()[1:]
         green_trails = green.get_segments()[1:]
+
+        number = random.randrange(0,50)
+
+        if number == 25:
+            blue.grow_tail(2)
+            green.grow_tail(2)
 
         for green_trail in green_trails:
             if blue_front.get_position().equals(green_trail.get_position()):
