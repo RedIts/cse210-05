@@ -20,8 +20,8 @@ def main():
     
     # create the cast
     cast = Cast()
-    cast.add_actor("blue", Snake(constants.PURPLE, constants.BLUE))
-    cast.add_actor("green", Snake(constants.YELLOW, constants.GREEN))
+    cast.add_actor("blue", Snake(constants.PURPLE, constants.BLUE, "player1"))
+    cast.add_actor("green", Snake(constants.YELLOW, constants.GREEN, "player2"))
     cast.add_actor("player1_scores", Score1())
     cast.add_actor("player2_scores", Score2())
    
