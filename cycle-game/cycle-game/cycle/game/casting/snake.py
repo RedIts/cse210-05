@@ -18,7 +18,7 @@ class Snake(Actor):
         self._player = player
         self._body_color = body_color
         self._head_color = head_color
-        self._prepare_body(player)
+        self._prepare_body()
 
     def get_segments(self):
         return self._segments
