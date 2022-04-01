@@ -22,7 +22,7 @@ class ControlActorsAction(Action):
         self._keyboard_service1 = keyboard_service
         self._keyboard_service2 = keyboard_service
         self._direction1 = Point(0, -constants.CELL_SIZE)
-        self._direction2 = Point(0, constants.CELL_SIZE)
+        self._direction2 = Point(0, -constants.CELL_SIZE)
 
     def execute(self, cast, script):
         """Executes the control actors action.
